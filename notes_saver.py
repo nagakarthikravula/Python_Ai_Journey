@@ -28,8 +28,8 @@ def view_notes(notes):
     if notes:
         print("Your Notes:")
         print("----------------------")
-        for index,note in enumerate(notes):
-            print(f"{index+1}. {note}")
+        for index,note in enumerate(notes,start=1):
+            print(f"{index}. {note}")
         print("----------------------")
     else:
         print("No notes found.")
@@ -46,17 +46,40 @@ def delete_note(notes):
                 return notes
             else:
                 print("Invalid note number.")
+                return notes
         except ValueError:
             print("Invalid Input Type")
+            return notes
+
     else:
         print("No notes to delete")
         return notes
             
 
-notes = load_notes()
-notes = add_note(notes)
-notes = add_note(notes)
-print(notes)
-view_notes(notes)
-notes = delete_note(notes)
-view_notes(notes)
+def main():
+    notes = load_notes()
+    while True:
+        i = input('''
+========================================
+        Notes Saver App
+========================================
+1. View Notes
+2. Add Note
+3. Delete Note
+4. Exit
+Enter your choice: 
+''')
+        if i == "1":
+            view_notes(notes)
+        elif i == "2":
+            notes = add_note(notes)
+        elif i == "3":
+            notes = delete_note(notes)
+        elif i == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
