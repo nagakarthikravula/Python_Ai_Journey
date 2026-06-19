@@ -7,6 +7,7 @@ This repository documents my learning journey — real projects built from scrat
 
 ---
 
+
 ## Month 1 — Python Foundations (June 2026)
 
 **Goal:** Strengthen Python to the point where I can build real programs — not college assignments.
