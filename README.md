@@ -49,7 +49,6 @@ python contact_book.py
 - `add_contacts()` — takes user input and adds a new contact
 - `search_contacts()` — searches for a contact by name using the `in` keyword
 - `delete_contact()` — removes a contact with confirmation
-
 ---
 
 ### Week 2 — Bank Account OOP App
